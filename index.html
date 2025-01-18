@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vulnerable Website</title>
+<style>
+/* CSS Vulnerability: Missing Semicolon */
+body { 
+    background-color: red; 
+}
+</style>
+</head>
+<body>
+
+<h1>Welcome to the Vulnerable Website!</h1>
+
+<h2>SQL Injection Form</h2>
+<form action="process.php" method="post">
+    Username: <input type="text" name="username"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
