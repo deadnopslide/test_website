@@ -1,23 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Vulnerable Website</title>
-<style>
-/* CSS Vulnerability: Missing Semicolon */
-body { 
-    background-color: red; 
-}
-</style>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Trustmark Demo</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 40px; }
+      .card { max-width: 700px; padding: 24px; border: 1px solid #ddd; border-radius: 10px; }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Trustmark Demo Site</h1>
+      <p>If domain is allowlisted/onboarded, Trustmark badge appears.</p>
+      <button data-trustmark-btn>Checkout</button>
+    </div>
 
-<h1>Welcome to the Vulnerable Website!</h1>
+    <!-- Optional footer anchor if you want footer badge mode -->
+    <div id="tm-footer-anchor" style="margin-top: 40px;"></div>
 
-<h2>SQL Injection Form</h2>
-<form action="process.php" method="post">
-    Username: <input type="text" name="username"><br><br>
-    <input type="submit" value="Submit">
-</form>
-
-</body>
+    <!-- Trustmark script -->
+    <script
+      id="trustmark-widget"
+      src="https://security-trustmark-api-qa-green.qa.security.blackhawknetwork.com/widget"
+      data-badge="floating"
+      data-widget-position="BR"
+    ></script>
+  </body>
 </html>
